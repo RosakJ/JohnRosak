@@ -504,11 +504,14 @@ header {
     font-size: 1.2rem;
 }
 
-.portfolio-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
+@media (max-width: 800px) {
+    .portfolio-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+        height: auto;
+    }
 }
 
 .center {
