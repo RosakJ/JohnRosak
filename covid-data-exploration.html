@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Rosak Portfolio Website</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <script src="https://kit.fontawesome.com/24324b70f2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href=css/style.css>
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo logo_btn">
+                <a href="index.html">
+                    <img src="img/JohnRosakLogo.png" alt="Logo" href="#index">
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Covid Data Exploration
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">SQL + Tableau</p>
+            <img src="img/covid-data-exploration/SQL_1.png" alt="SQL Screenshot" class=intro__img>
+        </section>
+
+        <!-- Portfolio Item Main -->
+
+        <section>
+            <div class="portfolio-item-individual">
+                <h3>Background</h3>
+                <p >This project started with a desire to learn and apply skills with primarily SQL and Tableau in mind.
+                    The data set was grabbed from a website called <a class="urlClass" href="https://ourworldindata.org/covid-deaths">Our World in Data</a> 
+                    and it has a very robust and daily updated spreadsheet on World Covid-19 data.
+                </p>
+                <p>The first steps were putting getting the data I wanted to work with from the excel sheet
+                    and then imported into the SQL database I made to get the process kickstarted. The first thing
+                    to notice is how much information is provided. Our World in Data has an extremely throughough look into
+                    the pandemic, but to start I wanted to focus on the number of deaths and vaccinations given. Once that was separated
+                    I imported it into SQL, using Microsoft's import tool in Microsoft SQL Management Studio.
+                </p>
+                <img src="img/covid-data-exploration/SQL_1.png" alt="SQL Screenshot" class=portfolio-img>
+                <h3>Basic Queries</h3>
+                <p>Once I had the spreadsheet in the Management Studio I begain looking into what the data provided and selected the
+                    starting data that I wanted to work with, which ended up being the location, dates, total cases, new cases, total deaths, and the population. 
+                    With this I had plenty to work with and began looking at the Total Cases vs Total deaths in each country represented as Death Percentage, showing
+                    likelihood of death after contracting Covid in each country. Keeping the order by country first and then date we can see how the Death Percentage
+                    changed overtime.
+                </p>
+                <p>While these stats are extremely interesting, it's important to keep in mind that there are so many variables at play. When 
+                    comparing, we need to consider different properties like the standard of living in each country, the common health/life expectancy, even looking at 
+                    how different each person is that contracted the virus. The statistics that we can get from this data can lead to some cool insights but I'm going 
+                    to keep in mind that this is defenitly not the whole picture. 
+                </p>
+                <h3>More Advanced Queries</h3>
+                <p>Some of the more advanced techniques I started to work with were using temporary results for calculations. These help 
+                    with more advanced Queries. In this example I used this to look at the total number of people vaccinated per day in a country. To accomplish this I 
+                    summed each new vaccination partitioned by the location and the date. This way on any given day I'm able to see the total number of people vaccinated 
+                    in that particular country. To demonstrate, I did this two ways, first with CTE (Common Table Expression) and then with Temporary Tables.
+                </p>
+                <h3 class="img_title">CTE Method</h3>
+                <img src="img/covid-data-exploration/SQL_2.png" alt="CTE Example" class=portfolio-img>
+                <h3 class="img_title">Temp Table Method</h3>
+                <img src="img/covid-data-exploration/SQL_3.png" alt="Temp Table Example" class=portfolio-img>
+                <h3>Future of the Project</h3>
+                <p>This project is far from complete, but I wanted to get the start of it down. In the near future I'm going to be doing more queries and then build a 
+                    Tableau dashboard with it. Once that is done I'm going to update this page with the process, for now please checkout the project on GitHub for a better view
+                    with the button below:
+                </p>
+    
+            </div>
+            <div class="portfolio-item-btn"> <a href="https://github.com/RosakJ/Covid-Data-Exploration/blob/main/Covid%20Data%20Exploration.sql" class="btn portfolio-item-btn-true">GitHub</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:JohnBRosak@gmail.com" class="footer__link">JohnBRosak@gmail.com</a>
+            <ul class="social-list">
+
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/john-rosak/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></li>
+
+                <li class="social-list__item"><a class="social-list__link"href="https://github.com/RosakJ/RosakJ">
+                    <i class="fa-brands fa-github"></i>
+                </a></li>
+
+                <li class="social-list__item"><a class="social-list__link">
+                    <i class="fa-brands fa-google"></i>
+                </a></li>
+                
+            </ul>
+        </footer>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

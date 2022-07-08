@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Rosak Portfolio Website</title>
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <script src="https://kit.fontawesome.com/24324b70f2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href=css/style.css>
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo logo_btn">
+                <a href="index.html">
+                    <img src="img/JohnRosakLogo.png" alt="Logo" href="#index">
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>John Rosak</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Data Analyst</p>
+            <img src="img/john icon-03.png" alt="A picture of me smiling" class=intro__img>
+        </section>
+
+        
+
+        <!-- About Me-->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about">Designer & deveoloper based out of NYC</p>
+
+            <div class="about-me__body">
+                <p>In May of 2022, I graduated from the University of Illinois with a degree in Econometrics and Quantitative Economics with a Business minor. Economics always appealed to my desire to understand the world using numbers. I love working with data, complex problems, and finding the best solutions to life’s unique scenarios. U of I prepared me to do that with classwork that taught us how to use data analysis tools that can be used on problems that don’t have answers in the back of the book. My course selections were chosen to give me a strong background in quantitative analytics, working primarily with R, Excel, and Python to compile the data needed to better understand questions and find the answers to those questions.</p>
+                <p>While attending U of I, I’ve worked as an IT Specialist for the College of Education. This experience helped me learn the importance of working with a team. After our assignments were given with deadlines, like rolling out a new site template, time management was required, but not possible without communication. An opportunity came up to work on web development for the College of Education and the Big Ten Academic Alliance. To do this I had to work with Sitefinity and learn about both front-end and back-end web management. Migrating to a new system and working through bugs across the websites not only helped me appreciate teamwork, but it also taught me how to coordinate a range of expectations from multiple departments of a large University. Presenting all of these departments’ information on a website that could be navigated by all was a very rewarding experience.</p>
+                <p>Outside of school some of my interests include listening to podcasts, reading webtoons, and running. Recently, my family moved to Virginia and I can’t wait to experience Washington DC, hike on the Appalachian trail, and make the area my home.</p>
+            </div>
+
+            <img src="img/ProfessionalJohn.png" alt="John dressed up" class="about-me__img">
+        </section>
+
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">A selection of my range of work.</p>
+            
+            <div class="portfolio">
+
+                <!-- Porfolio item 01 -->
+                <a href="covid-data-exploration.html" class="portfolio__item">
+                    <img src="img/covid-data-exploration/SQL_1.png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Porfolio item 02 -->
+                <a href="econ-paper-replication.html" class="portfolio__item">
+                    <img src="img/econ-paper-replication/r-markdown-screenshot.png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Porfolio item 03 -->
+                <a href="r-process.html" class="portfolio__item">
+                    <img src="img/r-process/rstudio-screenshot.png" alt="" class="portfolio__img">
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:JohnBRosak@gmail.com" class="footer__link">JohnBRosak@gmail.com</a>
+            <ul class="social-list">
+
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/john-rosak/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></li>
+
+                <li class="social-list__item"><a class="social-list__link"href="https://github.com/RosakJ/RosakJ">
+                    <i class="fa-brands fa-github"></i>
+                </a></li>
+
+                <li class="social-list__item"><a class="social-list__link">
+                    <i class="fa-brands fa-google"></i>
+                </a></li>
+            </ul>
+        </footer>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
