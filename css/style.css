@@ -504,7 +504,7 @@ header {
     font-size: 1.2rem;
 }
 
-@media (max-width:800px) {
+@media maxwidth {
     .portfolio-img {
         display: flex;
         margin-left: auto;
